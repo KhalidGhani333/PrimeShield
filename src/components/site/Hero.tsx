@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Check, Star, Shield } from "./Icons";
-import { useCountUp } from "./useReveal";
+import { useEffect, useState } from "react";
+import { ArrowRight } from "./Icons";
 
 const HEADLINE = ["Protect", "What", "Matters", "Most", "to"];
 const FINAL = "You.";
@@ -12,9 +11,6 @@ export function Hero({ onQuote }: { onQuote: () => void }) {
     return () => clearInterval(t);
   }, []);
 
-  const yearsRef = useRef<HTMLSpanElement>(null);
-  useCountUp(20, yearsRef);
-
   return (
     <section id="home" className="relative min-h-screen pt-28 md:pt-36 pb-20 overflow-hidden bg-hero-mesh text-white">
       {/* subtle grid noise */}
@@ -22,12 +18,7 @@ export function Hero({ onQuote }: { onQuote: () => void }) {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7">
-          <div className="reveal in inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs sm:text-sm font-medium">
-            <Check className="h-4 w-4" style={{ color: "var(--color-green)" }} />
-            FCA Authorised &amp; Regulated · Trusted by 50,000+ UK Customers
-          </div>
-
-          <h1 className="mt-6 font-display font-extrabold tracking-tight text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-balance">
+          <h1 className="mt-6 font-display font-extrabold tracking-tight text-3xl sm:text-4xl lg:text-5xl leading-[1.02] text-balance">
             <span className="block">{HEADLINE.slice(0, Math.min(count, 2)).join(" ")}{count > 0 && count < 3 && <i className="not-italic cursor-blink" />}</span>
             <span className="block">
               {count >= 3 && HEADLINE.slice(2, Math.min(count, 4)).join(" ")}
@@ -44,7 +35,7 @@ export function Hero({ onQuote }: { onQuote: () => void }) {
           </h1>
 
           <p className="mt-6 max-w-xl text-base sm:text-lg text-white/75 leading-relaxed">
-            Explore comprehensive insurance plans designed to safeguard your health, home, car, and life — tailored to meet your unique needs across the UK.
+            Explore comprehensive insurance plans designed to safeguard your health, home, car, and life - tailored to meet your unique needs.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -62,18 +53,6 @@ export function Hero({ onQuote }: { onQuote: () => void }) {
             >
               Compare Plans
             </a>
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-white/85">
-            <span className="flex items-center gap-2"><Shield className="h-4 w-4" style={{ color: "var(--color-teal)" }} /> FCA Regulated</span>
-            <span className="flex items-center gap-2"><Star className="h-4 w-4" style={{ color: "var(--color-green)" }} /> 4.8/5 Trustpilot</span>
-            <span className="flex items-center gap-2">🇬🇧 UK Based Team</span>
-          </div>
-
-          <div className="mt-10 flex items-baseline gap-3">
-            <span ref={yearsRef} className="font-display text-5xl font-extrabold" style={{ color: "var(--color-teal)" }}>0</span>
-            <span className="text-3xl font-display font-extrabold" style={{ color: "var(--color-teal)" }}>+</span>
-            <span className="text-white/75">Years of Experience in UK Insurance</span>
           </div>
         </div>
 

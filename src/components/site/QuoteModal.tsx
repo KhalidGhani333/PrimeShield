@@ -9,10 +9,14 @@ const TILES = [
 export function QuoteModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [step, setStep] = useState(0);
   const [type, setType] = useState("");
-  const [form, setForm] = useState({ name: "", postcode: "", dob: "" });
+  const [form, setForm] = useState({ name: "", postcode: "", dob: "", email: "", phone: "" });
 
   useEffect(() => {
-    if (!open) { setStep(0); setType(""); setForm({ name: "", postcode: "", dob: "" }); }
+    if (!open) {
+      setStep(0);
+      setType("");
+      setForm({ name: "", postcode: "", dob: "", email: "", phone: "" });
+    }
     document.body.style.overflow = open ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [open]);
@@ -59,7 +63,8 @@ export function QuoteModal({ open, onClose }: { open: boolean; onClose: () => vo
             <Step title="Just a few details" subtitle={`We'll use these to find the best ${type.toLowerCase()} insurance for you.`}>
               <form onSubmit={(e) => { e.preventDefault(); setStep(2); }} className="mt-6 space-y-3">
                 <Input label="Full name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} required />
-                <Input label="UK postcode" value={form.postcode} onChange={(v) => setForm({ ...form, postcode: v.toUpperCase() })} required pattern="^[A-Za-z]{1,2}\d[A-Za-z\d]?\s?\d[A-Za-z]{2}$" />
+                <Input label="Email" type="email" value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
+                <Input label="Phone Number" type="tel" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} required />
                 <Input label="Date of birth" type="date" value={form.dob} onChange={(v) => setForm({ ...form, dob: v })} required />
                 <button type="submit" className="ripple w-full rounded-full px-6 py-3.5 text-sm font-bold text-white inline-flex items-center justify-center gap-2 mt-4" style={{ background: "var(--color-teal)" }}>
                   Find My Quotes <ArrowRight className="h-4 w-4" />
@@ -74,7 +79,7 @@ export function QuoteModal({ open, onClose }: { open: boolean; onClose: () => vo
                 <Shield className="h-10 w-10" />
               </div>
               <h3 className="mt-6 font-display font-extrabold text-2xl">We're finding your best quotes…</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Comparing 50+ FCA-regulated UK insurers.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Comparing 50+ leading insurers.</p>
             </div>
           )}
 
@@ -84,8 +89,9 @@ export function QuoteModal({ open, onClose }: { open: boolean; onClose: () => vo
                 <Check className="h-10 w-10" />
               </div>
               <h3 className="mt-6 font-display font-extrabold text-3xl">Great news!</h3>
+              {/* Modified success message */}
               <p className="mt-3 text-muted-foreground max-w-sm">
-                We found <strong className="text-foreground">23 quotes</strong> matching your needs. A ShieldWise advisor will call you within 15 minutes.
+                Our PrimeShield advisor will be in touch shortly.
               </p>
               <button onClick={onClose} className="mt-8 rounded-full px-7 py-3 text-sm font-bold text-white" style={{ background: "var(--color-navy-deep)" }}>
                 Done
@@ -96,7 +102,7 @@ export function QuoteModal({ open, onClose }: { open: boolean; onClose: () => vo
 
         <div className="px-8 sm:px-10 pb-6 flex items-center justify-between text-xs text-muted-foreground">
           <span>Step {Math.min(step + 1, 4)} of 4</span>
-          <span className="flex items-center gap-1.5"><Shield className="h-3 w-3" style={{ color: "var(--color-teal)" }} /> FCA Regulated · SSL Secure</span>
+          <span className="flex items-center gap-1.5"><Shield className="h-3 w-3" style={{ color: "var(--color-teal)" }} /> SSL Secure · Local Support</span>
         </div>
       </div>
 

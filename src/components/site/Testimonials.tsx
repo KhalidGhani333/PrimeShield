@@ -3,12 +3,12 @@ import { Star } from "./Icons";
 import { Pill } from "./About";
 
 const reviews = [
-  { name: "James Whitfield", role: "Homeowner, London", text: "ShieldWise made finding home insurance so easy and hassle-free. Their comparison saved me over £200 on last year's premium. Highly recommend!" },
+  { name: "James Whitfield", role: "Homeowner, London", text: "PrimeShield made finding home insurance so easy and hassle-free. Their comparison saved me over £200 on last year's premium. Highly recommend!" },
   { name: "Priya Sharma", role: "Driver, Birmingham", text: "Found comprehensive car insurance at a great price. The platform is user-friendly and the team was incredibly helpful throughout." },
-  { name: "Thomas Grant", role: "Landlord, Manchester", text: "As a landlord with three properties, I needed specialist cover. ShieldWise sorted everything perfectly and saved me significant money." },
-  { name: "Sarah Thompson", role: "Business Owner, Leeds", text: "ShieldWise simplified my business insurance search entirely. I appreciated their transparent process and brilliant UK support team." },
+  { name: "Thomas Grant", role: "Landlord, Manchester", text: "As a landlord with three properties, I needed specialist cover. PrimeShield sorted everything perfectly and saved me significant money." },
+  { name: "Sarah Thompson", role: "Business Owner, Leeds", text: "PrimeShield simplified my business insurance search entirely. I appreciated their transparent process and brilliant support team." },
   { name: "Mohammed Al-Rashid", role: "Family Man, Edinburgh", text: "Got our life insurance sorted within a day. The advisor was knowledgeable and helped us find the right level of cover for our family." },
-  { name: "Emma Clarke", role: "Pet Owner, Bristol", text: "Pet insurance comparison on ShieldWise is brilliant. Found lifetime cover for my labrador at half the price I was paying before!" },
+  { name: "Emma Clarke", role: "Pet Owner, Bristol", text: "Pet insurance comparison on PrimeShield is brilliant. Found lifetime cover for my labrador at half the price I was paying before!" },
   { name: "Daniel Roberts", role: "Traveller, London", text: "Annual travel insurance sorted in minutes. When I had to make a claim abroad, the process was smooth and stress-free." },
 ];
 
@@ -71,9 +71,9 @@ export function Testimonials() {
         </div>
 
         <div className="mt-8 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-          <span className="font-bold" style={{ color: "var(--color-green)" }}>★ Trustpilot</span>
+          <span className="font-bold" style={{ color: "var(--color-green)" }}>★ Trusted Choice</span>
           <span>·</span>
-          <span>Excellent · 4.8 / 5</span>
+          <span>Excellent Rating</span>
         </div>
       </div>
 

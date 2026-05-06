@@ -4,21 +4,21 @@ import { Pill } from "./About";
 import car from "@/assets/svc-car.jpg";
 import home from "@/assets/svc-home.jpg";
 import landlord from "@/assets/svc-landlord.jpg";
-import life from "@/assets/svc-life.jpg";
 import health from "@/assets/svc-health.jpg";
 import travel from "@/assets/svc-travel.jpg";
-import pet from "@/assets/svc-pet.jpg";
 import business from "@/assets/svc-business.jpg";
+const life = "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?q=80&w=2038&auto=format&fit=crop";
+const pet = "https://images.unsplash.com/photo-1450778869180-41d060196e?q=80&w=1886&auto=format&fit=crop";
 
 const services = [
-  { n: "01", title: "Car Insurance", img: car, body: "Drive with confidence. Our car insurance covers accidents, fire, theft, third-party liability, and breakdown recovery. Compare quotes from 30+ UK providers instantly.", features: ["Comprehensive", "Third Party", "TP Fire & Theft"] },
-  { n: "02", title: "Home Insurance", img: home, body: "Protect your home and contents. Covers buildings, contents, accidental damage, flooding, and personal liability for UK homeowners and tenants.", features: ["Buildings", "Contents", "Accidental Damage"] },
-  { n: "03", title: "Landlord Insurance", img: landlord, body: "Specialist cover for UK buy-to-let landlords. Buildings, contents, loss of rent, legal expenses, and landlord liability — all in one policy.", features: ["Loss of Rent", "Legal Expenses", "Liability"] },
-  { n: "04", title: "Life Insurance", img: life, body: "Secure your family's financial future. Term life, whole of life, and critical illness cover options. Policies from £5/month for UK residents.", features: ["Term Life", "Whole of Life", "Critical Illness"] },
-  { n: "05", title: "Health Insurance", img: health, body: "Private medical insurance for faster access to UK specialists and treatment. Includes dental, optical, and mental health support options.", features: ["Inpatient", "Dental", "Mental Health"] },
+  { n: "01", title: "Car Insurance", img: car, body: "Drive with confidence. Our car insurance covers accidents, fire, theft, third-party liability, and breakdown recovery. Compare quotes from 30+ leading providers instantly.", features: ["Comprehensive", "Third Party", "TP Fire & Theft"] },
+  { n: "02", title: "Home Insurance", img: home, body: "Protect your home and contents. Covers buildings, contents, accidental damage, flooding, and personal liability for homeowners and tenants.", features: ["Buildings", "Contents", "Accidental Damage"] },
+  { n: "03", title: "Landlord Insurance", img: landlord, body: "Specialist cover for buy-to-let landlords. Buildings, contents, loss of rent, legal expenses, and landlord liability — all in one policy.", features: ["Loss of Rent", "Legal Expenses", "Liability"] },
+  { n: "04", title: "Life Insurance", img: life, body: "Secure your family's financial future. Term life, whole of life, and critical illness cover options. Policies from £5/month for residents.", features: ["Term Life", "Whole of Life", "Critical Illness"] },
+  { n: "05", title: "Health Insurance", img: health, body: "Private medical insurance for faster access to specialists and treatment. Includes dental, optical, and mental health support options.", features: ["Inpatient", "Dental", "Mental Health"] },
   { n: "06", title: "Travel Insurance", img: travel, body: "Single trip or annual multi-trip cover. Includes medical emergencies, cancellation, lost luggage, and 24/7 emergency assistance worldwide.", features: ["Medical", "Cancellation", "Lost Luggage"] },
-  { n: "07", title: "Pet Insurance", img: pet, body: "Lifetime or annual pet cover for cats and dogs. Vet fees, illness, accidents, and third-party liability for UK pet owners.", features: ["Vet Fees", "Lifetime Cover", "Third-Party"] },
-  { n: "08", title: "Business Insurance", img: business, body: "Public liability, employers' liability, professional indemnity, and commercial property cover for UK businesses of all sizes.", features: ["Public Liability", "Employers' Liability", "PI"] },
+  { n: "07", title: "Pet Insurance", img: pet, body: "Lifetime or annual pet cover for cats and dogs. Vet fees, illness, accidents, and third-party liability for pet owners.", features: ["Vet Fees", "Lifetime Cover", "Third-Party"] },
+  { n: "08", title: "Business Insurance", img: business, body: "Public liability, employers' liability, professional indemnity, and commercial property cover for businesses of all sizes.", features: ["Public Liability", "Employers' Liability", "PI"] },
 ];
 
 export function Services() {
@@ -27,13 +27,13 @@ export function Services() {
   return (
     <section id="insurance" className="py-24 sm:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="reveal max-w-2xl">
+        <div className="max-w-2xl">
           <Pill>Our Insurance Services</Pill>
-          <h2 className="mt-4 text-4xl sm:text-5xl font-display font-extrabold leading-[1.05] text-balance">
+          <h2 className="mt-4 text-3xl sm:text-4xl font-display font-extrabold leading-[1.05] text-balance">
             Comprehensive Cover for Every Stage of Life
           </h2>
           <p className="mt-4 text-muted-foreground">
-            From protecting your car to securing your family's future, ShieldWise offers tailored insurance solutions for every UK household.
+            From protecting your car to securing your family's future, PrimeShield offers tailored insurance solutions for every household.
           </p>
         </div>
 
@@ -91,9 +91,7 @@ export function Services() {
                     </span>
                   ))}
                 </div>
-                <a href="#quote" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold" style={{ color: "var(--color-teal)" }}>
-                  View Details <ArrowRight className="h-4 w-4" />
-                </a>
+                {/* Removed View Details link */}
               </div>
             </div>
           </div>

@@ -6,8 +6,8 @@ import b3 from "@/assets/blog-3.jpg";
 
 const posts = [
   { img: b1, tag: "Safety", date: "March 2026", title: "Protecting Your Family's Future with Life Insurance" },
-  { img: b2, tag: "Guides", date: "March 2026", title: "The Top Benefits of Comprehensive Car Cover in the UK" },
-  { img: b3, tag: "Claims", date: "March 2026", title: "How to File an Insurance Claim in the UK Without the Hassle" },
+  { img: b2, tag: "Guides", date: "March 2026", title: "The Top Benefits of Comprehensive Car Cover" },
+  { img: b3, tag: "Claims", date: "March 2026", title: "How to File an Insurance Claim Without the Hassle" },
 ];
 
 export function Blog() {
@@ -19,7 +19,7 @@ export function Blog() {
             <Pill>Latest Insights</Pill>
             <h2 className="mt-4 text-4xl sm:text-5xl font-display font-extrabold leading-[1.05]">Our Latest Guides &amp; News</h2>
             <p className="mt-3 text-muted-foreground max-w-xl">
-              Expert advice on UK insurance, claims, and getting the best cover for your money.
+              Expert advice on insurance, claims, and getting the best cover for your money.
             </p>
           </div>
           <a href="#" className="inline-flex items-center gap-2 text-sm font-semibold rounded-full px-5 py-3 border-2"

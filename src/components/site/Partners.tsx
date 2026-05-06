@@ -6,7 +6,7 @@ export function Partners() {
     <section className="py-16 bg-white border-y border-border">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <h3 className="text-center text-sm font-bold tracking-[0.18em] uppercase text-muted-foreground">
-          We Compare Cover From Leading UK Insurers
+          We Compare Cover From Leading Insurers
         </h3>
         <div className="mt-8 marquee">
           <div className="marquee-track">

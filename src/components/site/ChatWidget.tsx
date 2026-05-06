@@ -13,7 +13,7 @@ export function ChatWidget({ onQuote }: { onQuote: () => void }) {
                 <Chat className="h-4 w-4" />
               </span>
               <div className="leading-tight">
-                <div className="font-display font-bold text-sm">ShieldWise Support</div>
+                <div className="font-display font-bold text-sm">PrimeShield Support</div>
                 <div className="text-[11px] text-white/70 flex items-center gap-1">
                   <span className="h-1.5 w-1.5 rounded-full" style={{ background: "var(--color-green)" }} /> Online now
                 </div>
@@ -23,7 +23,7 @@ export function ChatWidget({ onQuote }: { onQuote: () => void }) {
           </div>
           <div className="p-4 space-y-3">
             <div className="text-sm rounded-2xl rounded-tl-sm p-3" style={{ background: "var(--color-mist)" }}>
-              Hi! 👋 Welcome to ShieldWise. How can we help you today?
+              Hi! 👋 Welcome to PrimeShield. How can we help you today?
             </div>
             <div className="flex flex-col gap-2">
               <button onClick={onQuote} className="text-left text-sm font-semibold rounded-xl border-2 px-3 py-2 transition hover:bg-mist" style={{ borderColor: "var(--color-teal)", color: "var(--color-teal)" }}>Get a Quote</button>

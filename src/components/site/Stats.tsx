@@ -2,8 +2,8 @@ import { useRef } from "react";
 import { useCountUp } from "./useReveal";
 
 const stats = [
-  { value: 20, suffix: "+", label: "Years Experience in UK Insurance Industry" },
-  { value: 50000, suffix: "+", label: "Satisfied UK Policyholders" },
+  { value: 10, suffix: "+", label: "Years Experience in the Insurance Industry" },
+  { value: 50000, suffix: "+", label: "Satisfied Policyholders" },
   { value: 24, suffix: "/7", label: "Customer Support, Always Available" },
   { value: 99, suffix: "%", label: "Claims Approval Rate" },
 ];

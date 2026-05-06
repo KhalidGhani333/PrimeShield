@@ -5,8 +5,7 @@ const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#insurance", label: "Insurance" },
-  { href: "#claims", label: "Claims" },
-  { href: "#blog", label: "Blog" },
+  // { href: "/claims", label: "Claims" }, // Removed Claims link
   { href: "#contact", label: "Contact" },
 ];
 
@@ -53,10 +52,10 @@ export function Navbar({ onQuote }: { onQuote: () => void }) {
             </span>
             <span className="flex flex-col leading-tight">
               <span className={`font-display font-extrabold tracking-tight text-lg ${scrolled ? "text-navy-deep" : "text-white"}`} style={scrolled ? { color: "var(--color-navy-deep)" } : {}}>
-                ShieldWise
+                PrimeShield
               </span>
               <span className={`text-[10px] uppercase tracking-[0.18em] font-semibold ${scrolled ? "text-teal" : "text-white/70"}`} style={scrolled ? { color: "var(--color-teal)" } : {}}>
-                FCA Regulated
+                Leading Insurance Broker
               </span>
             </span>
           </a>
@@ -114,7 +113,7 @@ export function Navbar({ onQuote }: { onQuote: () => void }) {
         <div className="flex items-center justify-between p-5">
           <span className="flex items-center gap-2 text-white font-display font-bold text-lg">
             <Shield className="h-5 w-5 text-teal" style={{ color: "var(--color-teal)" }} />
-            ShieldWise
+            PrimeShield
           </span>
           <button onClick={() => setOpen(false)} className="text-white" aria-label="Close menu">
             <Close />
